@@ -11,7 +11,7 @@ export class ApiError extends Error {
 async function request<T>(path: string, init?: RequestInit): Promise<T> {
   let res: Response;
   try {
-    res = await fetch(`/api${path}`, init);
+    res = await fetch(`${import.meta.env.VITE_API_URL ?? ""}/api${path}`, init);
   } catch {
     throw new ApiError(0, "Cannot reach the backend. Is the API running on http://127.0.0.1:8000?");
   }
