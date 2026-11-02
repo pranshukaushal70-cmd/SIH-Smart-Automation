@@ -1,0 +1,16 @@
+fastapi==0.115.6
+uvicorn[standard]==0.32.1
+sqlalchemy==2.0.36
+pydantic>=2.9,<3
+python-multipart==0.0.20
+pymupdf==1.25.1
+pillow==11.0.0
+numpy<2.3
+reportlab==4.2.5
+# Bundled OCR engine (CPU, ONNX; pulls in opencv-python)
+rapidocr-onnxruntime==1.3.24
+# Optional: used only if Tesseract is installed and VERI_OCR_ENGINE=tesseract (or auto without RapidOCR)
+pytesseract==0.3.13
+# tests
+pytest==8.3.4
+httpx==0.28.1
